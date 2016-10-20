@@ -1,26 +1,34 @@
 .background { 
-	background: #7fc1cc;
+    background: #7bdff2;
     table-layout: fixed;
     border-spacing: 0; 
-   
-
 }
 
 .background td { 
 	padding: 0;         
 }
 .lava { 
-	background: #e88630; 
+	background: #ff7e6b; 
 }
 .wall {
-	background: #fae4d1; 
-	background-image: url("http://www.cerrad.pl/produkty/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/l/o/loft-bick-wyklejanie-8.jpg");
+	background: #EBE18C; 
+	background-image: url("http://14textures.com/wp-content/uploads/2015/06/Charcoal-2.jpg");
+}
+
+.actor { 
+	position: absolute;  
+}
+
+.player { 
+	background: #545e75; 
 }
 
 .floater { 
-	background: #774e22; 
+	background: #4d9de0; 
 }
-
 .game {
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 450px;
   position: relative;
 }
