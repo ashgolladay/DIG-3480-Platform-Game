@@ -1,5 +1,5 @@
 .background { 
-    background: #7bdff2;
+    background: #8AD0FE;
     table-layout: fixed;
     border-spacing: 0; 
 }
@@ -8,23 +8,27 @@
 	padding: 0;         
 }
 .lava { 
-	background: #ff7e6b; 
+	background: #AC0029; 
 }
 .wall {
 	background: #EBE18C; 
-	background-image: url("http://14textures.com/wp-content/uploads/2015/06/Charcoal-2.jpg");
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/66/ce/8166ce752069e7df3a55b993fe9ae1d4.jpg");
 }
 
 .actor { 
 	position: absolute;  
 }
 
+.coin { 
+background: #5778FE; 
+}
+
 .player { 
-	background: #545e75; 
+	background: #00459E; 
 }
 
 .floater { 
-	background: #4d9de0; 
+	background: #3C5889; 
 }
 .game {
   overflow: hidden;
