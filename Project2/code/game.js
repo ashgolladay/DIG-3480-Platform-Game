@@ -14,6 +14,9 @@ function Level(plan) {
   // Store the individual tiles in our own, separate array
   this.grid = [];
 
+  // Store a list of actors to process each frame
+  this.actors = [];
+
   // Loop through each row in the plan, creating an array in our grid
   for (var y = 0; y < this.height; y++) {
     var line = plan[y], gridLine = [];
@@ -28,7 +31,7 @@ function Level(plan) {
       // Use if and else to handle the three cases
       if (Actor)
         this.actors.push(new Actor(new Vector(x, y), ch));
-      else if (ch == "x")
+     else if (ch == "x")
         fieldType = "wall";
       // Because there is a third case (space ' '), use an "else if" instead of "else"
       else if (ch == "!")
@@ -42,6 +45,11 @@ function Level(plan) {
     // Push the entire row onto the array of rows.
     this.grid.push(gridLine);
   }
+
+  // Find and assign the player character and assign to Level.player
+  this.player = this.actors.filter(function(actor) {
+    return actor.type == "player";
+  })[0];
 }
 
 function Vector(x, y) {
