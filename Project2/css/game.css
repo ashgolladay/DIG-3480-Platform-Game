@@ -1,18 +1,20 @@
 .background { 
-    background: #8AD0FE;
+	background: #8AD0FE;
     table-layout: fixed;
-    border-spacing: 0; 
+    border-spacing: 0;   
 }
 
 .background td { 
-	padding: 0;         
+	padding: 0;          
 }
+
 .lava { 
-	background: #AC0029; 
+	background: #AC0029;
 }
-.wall {
+
+.wall { 
 	background: #EBE18C; 
-	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/66/ce/8166ce752069e7df3a55b993fe9ae1d4.jpg");
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/66/ce/8166ce752069e7df3a55b993fe9ae1d4.jpg");   
 }
 
 .actor { 
@@ -30,6 +32,7 @@ background: #5778FE;
 .life {
 	background: #015EFE;
 }
+
 .floater { 
 	background: #3C5889; 
 }
