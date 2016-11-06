@@ -78,7 +78,7 @@ Vector.prototype.times = function(factor) {
 // A Player has a size, speed and position.
 function Player(pos) {
   this.pos = pos.plus(new Vector(0, -0.5));
-  this.size = new Vector(0.8, 1.5);
+  this.size = new Vector(0.9, 1.5);
   this.speed = new Vector(0, 0);
 }
 Player.prototype.type = "player";
@@ -95,9 +95,9 @@ Coin.prototype.type = "coin";
 // Enemy
 function Enemy(pos, ch) {
   this.pos = pos.plus(new Vector(0, 0));
-  this.size = new Vector(.5, 1);
-  this.speed = new Vector(1, 2);
-  this.wobble = Math.random() * Math.PI * 2;
+  this.size = new Vector(.5, .5);
+  this.speed = new Vector(2, 2);
+  this.wobble = Math.random() * Math.PI * 4;
 }
 Enemy.prototype.type = "enemy";
 
@@ -319,7 +319,7 @@ Lava.prototype.act = function(step, level) {
 
 var maxStep = 0.05;
 
-var wobbleSpeed = 11, wobbleDist = 0.2;
+var wobbleSpeed = 10, wobbleDist = 0.2;
 
 Coin.prototype.act = function(step) {
   this.wobble += step * wobbleSpeed;
@@ -336,7 +336,7 @@ Life.prototype.act = function(step) {
 
 var maxStep = 0.05;
 
-var playerXSpeed = 9;
+var playerXSpeed = 10;
 
 Player.prototype.moveX = function(step, level, keys) {
   this.speed.x = 0;
@@ -357,7 +357,7 @@ Player.prototype.moveX = function(step, level, keys) {
 
 var gravity = 32;
 var jumpSpeed = 20;
-var playerYSpeed = 9;
+var playerYSpeed = 10;
 
 Player.prototype.moveY = function(step, level, keys) {
   // Accelerate player downward (always)
@@ -399,7 +399,7 @@ Level.prototype.playerTouched = function(type, actor) {
   if (type == "lava" || type == "enemy"
           && this.status == null) {
     this.status = "lost";
-    this.finishDelay = 0.7;
+    this.finishDelay = 0.6;
   } else if (type == "coin" || type == "life") {
     this.actors = this.actors.filter(function(other) {
       return other != actor;
@@ -414,7 +414,7 @@ Level.prototype.playerTouched = function(type, actor) {
          }
          )) {
       this.status = "won";
-      this.finishDelay = 0.1;
+      this.finishDelay = 0.4;
     }
   }
 };
@@ -502,5 +502,6 @@ function runGame(plans, Display) {
   startLevel(0);
 }
   runGame(GAME_LEVELS, DOMDisplay);
+
 
 
