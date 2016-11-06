@@ -1,56 +1,47 @@
 .background { 
 	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png");
-    table-layout: fixed;
-    border-spacing: 0;   
+  table-layout: fixed;
+  border-spacing: 0;   
 }
-
 .background td { 
 	padding: 0;          
 }
-
 .lava { 
 	background: #FEB92F;
+  background-image: url("http://farm1.static.flickr.com/98/236910817_f2d4ce6053.jpg")
 }
-
 .wall { 
 	background: #000000;  
-  /*background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/66/ce/8166ce752069e7df3a55b993fe9ae1d4.jpg");*/
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/94/6c/a0/946ca06e70ae4ff5f85731cdb899165a.jpg");
 }
-
 .actor { 
 	position: absolute;  
 }
-
+.player { 
+  background: #1571b8; 
+}
 .coin { 
 background: white; 
 }
-
-.player { 
-	background: #1571b8; 
-}
-
 .life {
   background: #F0F8FF;
 }
-
 .enemy {
 	background: #FF8C00;
-  transform: rotate(-90deg);
+  background-image: url("http://img09.deviantart.net/15ba/i/2009/111/6/6/red_rock_texture_by_dachande99.jpg");
 }
-
 .floater { 
 	background: #000066; 
+  background-image: url("http://selfieword.com/wp-content/uploads/2016/05/dark-stone-tile-texture-and-black-stone-texture-wallpaper.jpg")
 }
-
 .lost .player {
   background: #22379D;
-  transform: scale(-0.5);
+  transform: scale(-.2);
 }
 .won .player {
   background: #80aaff;
   transform: scale(3);
 }
-
 .game {
   overflow: hidden;
   max-width: 600px;
