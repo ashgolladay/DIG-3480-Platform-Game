@@ -1,5 +1,5 @@
 .background { 
-    background: #8AD0FE;
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png");
     table-layout: fixed;
     border-spacing: 0;   
 }
@@ -9,12 +9,12 @@
 }
 
 .lava { 
-	background: #AC0029;
+	background: #FEB92F;
 }
 
 .wall { 
-	background: #EBE18C; 
-	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/66/ce/8166ce752069e7df3a55b993fe9ae1d4.jpg");   
+	background: #000000;  
+  /*background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/66/ce/8166ce752069e7df3a55b993fe9ae1d4.jpg");*/
 }
 
 .actor { 
@@ -22,23 +22,40 @@
 }
 
 .coin { 
-background: #5778FE; 
+background: white; 
 }
 
 .player { 
-	background: #00459E; 
+	background: #1571b8; 
 }
 
 .life {
-	background: #015EFE;
+  background: #F0F8FF;
+}
+
+.enemy {
+	background: #FF8C00;
+  transform: rotate(-90deg);
 }
 
 .floater { 
-	background: #3C5889; 
+	background: #000066; 
 }
+
+.lost .player {
+  background: #22379D;
+  transform: scale(-0.5);
+}
+.won .player {
+  background: #80aaff;
+  transform: scale(3);
+}
+
 .game {
   overflow: hidden;
   max-width: 600px;
   max-height: 450px;
   position: relative;
 }
+
+
