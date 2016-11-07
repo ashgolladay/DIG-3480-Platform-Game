@@ -95,9 +95,9 @@ Coin.prototype.type = "coin";
 // Enemy
 function Enemy(pos, ch) {
   this.pos = pos.plus(new Vector(0, 0));
-  this.size = new Vector(.5, .5);
-  this.speed = new Vector(2, 2);
-  this.wobble = Math.random() * Math.PI * 4;
+  this.size = new Vector(2, 2);
+  this.speed = new Vector(0, 0);
+  //this.wobble = Math.random() * Math.PI * 4;
 }
 Enemy.prototype.type = "enemy";
 
@@ -336,7 +336,7 @@ Life.prototype.act = function(step) {
 
 var maxStep = 0.05;
 
-var playerXSpeed = 10;
+var playerXSpeed = 9;
 
 Player.prototype.moveX = function(step, level, keys) {
   this.speed.x = 0;
@@ -357,7 +357,7 @@ Player.prototype.moveX = function(step, level, keys) {
 
 var gravity = 32;
 var jumpSpeed = 20;
-var playerYSpeed = 10;
+var playerYSpeed = 9;
 
 Player.prototype.moveY = function(step, level, keys) {
   // Accelerate player downward (always)
@@ -393,6 +393,22 @@ Player.prototype.act = function(step, level, keys) {
   }
 };
 
+var myTimer;
+
+function myFunction() {
+    setTimeout(function(){ myTimer.value="2 seconds" }, 2000);
+}
+function myStopFunction() {
+    clearTimeout(myTimer);
+}
+
+function checkTime(i) {
+    if (i<10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
 Level.prototype.playerTouched = function(type, actor) {
   //if the player touches lava and the player hasn't won
   // Player loses
@@ -400,6 +416,11 @@ Level.prototype.playerTouched = function(type, actor) {
           && this.status == null) {
     this.status = "lost";
     this.finishDelay = 0.6;
+  } else if (type == "life") {
+      playerXSpeed = 11;
+      this.myTimer;
+      clearTimeout(myTimer);
+      return actor.type == "life";
   } else if (type == "coin" || type == "life") {
     this.actors = this.actors.filter(function(other) {
       return other != actor;
@@ -409,8 +430,9 @@ Level.prototype.playerTouched = function(type, actor) {
     {
           if(actor.type == "coin")
               return actor.type == "coin";
-          else if(actor.type == "life")
-              return actor.type == "life";
+          /*else if(actor.type == "life")
+             
+              return actor.type == "life"; */
          }
          )) {
       this.status = "won";
@@ -497,11 +519,11 @@ function runGame(plans, Display) {
         startLevel(n + 1);
       else
         alert("Muahaha You Win!");
+
     });
   }
   startLevel(0);
 }
   runGame(GAME_LEVELS, DOMDisplay);
-
 
 
