@@ -336,7 +336,7 @@ Life.prototype.act = function(step) {
 
 var maxStep = 0.05;
 
-var playerXSpeed = 9;
+var playerXSpeed = 8;
 
 Player.prototype.moveX = function(step, level, keys) {
   this.speed.x = 0;
@@ -357,7 +357,7 @@ Player.prototype.moveX = function(step, level, keys) {
 
 var gravity = 32;
 var jumpSpeed = 20;
-var playerYSpeed = 9;
+var playerYSpeed = 8;
 
 Player.prototype.moveY = function(step, level, keys) {
   // Accelerate player downward (always)
@@ -417,9 +417,7 @@ Level.prototype.playerTouched = function(type, actor) {
     this.status = "lost";
     this.finishDelay = 0.6;
   } else if (type == "life") {
-      playerXSpeed = 11;
-      this.myTimer;
-      clearTimeout(myTimer);
+      playerXSpeed = 9;
       return actor.type == "life";
   } else if (type == "coin" || type == "life") {
     this.actors = this.actors.filter(function(other) {
@@ -518,8 +516,16 @@ function runGame(plans, Display) {
       else if (n < plans.length - 1)
         startLevel(n + 1);
       else
-        alert("Muahaha You Win!");
-
+        function displayWin() {
+          var image = document.createElement('img');
+          image.className = 'win';
+          var source = document.getElementById('won');
+          var text = 'Muahahah you win!';
+          img.src = "http://images.8tracks.com/cover/i/001/132/573/68696.original-6467.jpg?rect=0,0,400,400&q=98&fm=jpg&fit=max";
+          source.appendChild(image);
+          source.innerHTML += '<br>' + text;
+        }
+        displayWin();
     });
   }
   startLevel(0);
