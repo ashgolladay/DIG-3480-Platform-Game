@@ -1,5 +1,5 @@
 .background { 
-	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png");
+	background-image: url("http://www.mrwallpaper.com/wallpapers/gradient-background-1600x1200.jpg");
   table-layout: fixed;
   border-spacing: 0;   
 }
@@ -8,8 +8,8 @@
 }
 .lava { 
 	background: #FEB92F;
-  background-image: url("http://farm1.static.flickr.com/98/236910817_f2d4ce6053.jpg")
-}
+  background-image: url("http://vignette1.wikia.nocookie.net/nitrome/images/4/44/Lava_(Knuckleheads).gif/revision/latest?cb=20111221194031")
+} 
 .wall { 
 	background: #000000;  
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/94/6c/a0/946ca06e70ae4ff5f85731cdb899165a.jpg");
@@ -18,28 +18,28 @@
 	position: absolute;  
 }
 .player { 
-  background: #1571b8; 
+  background: #008080; 
 }
 .coin { 
 background: white; 
 }
 .life {
-  background: #F0F8FF;
+  background: #ffffe6;
 }
 .enemy {
-	background: #FF8C00;
-  background-image: url("http://img09.deviantart.net/15ba/i/2009/111/6/6/red_rock_texture_by_dachande99.jpg");
+ transform: rotate(180deg);
+  background-image: url("https://cdn.tutsplus.com/mobile/uploads/legacy/Endless-Runner_Part-6/spikeBlock.png");
 }
 .floater { 
 	background: #000066; 
   background-image: url("http://selfieword.com/wp-content/uploads/2016/05/dark-stone-tile-texture-and-black-stone-texture-wallpaper.jpg")
 }
 .lost .player {
-  background: #22379D;
+  background: #006666;
   transform: scale(-.2);
 }
 .won .player {
-  background: #80aaff;
+  background: #00cccc;
   transform: scale(3);
 }
 .game {
