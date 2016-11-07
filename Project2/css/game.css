@@ -24,7 +24,8 @@
 background: white; 
 }
 .life {
-  background: #ffffe6;
+  background: #d4f7f6;
+  box-shadow: -4px -7px 8px white, 4px -7px 8px white;
 }
 .enemy {
  transform: rotate(180deg);
