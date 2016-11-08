@@ -59,7 +59,7 @@ function Level(plan) {
 // Check if level is finished
 Level.prototype.isFinished = function() {
   return this.status != null && this.finishDelay < 0;
-};2
+};
 
 function Vector(x, y) {
   this.x = x; this.y = y;
@@ -394,20 +394,9 @@ Player.prototype.act = function(step, level, keys) {
 };
 
 var myTimer;
+var timerFunction;
+var endTimer;
 
-function myFunction() {
-    setTimeout(function(){ myTimer.value="2 seconds" }, 2000);
-}
-function myStopFunction() {
-    clearTimeout(myTimer);
-}
-
-function checkTime(i) {
-    if (i<10) {
-        i = "0" + i;
-    }
-    return i;
-}
 
 Level.prototype.playerTouched = function(type, actor) {
   //if the player touches lava and the player hasn't won
@@ -417,7 +406,8 @@ Level.prototype.playerTouched = function(type, actor) {
     this.status = "lost";
     this.finishDelay = 0.6;
   } else if (type == "life") {
-      playerXSpeed = 9;
+      playerXSpeed = 15;
+      timerFunction = setTimeout(function(){playerXSpeed=8},3000);
       return actor.type == "life";
   } else if (type == "coin" || type == "life") {
     this.actors = this.actors.filter(function(other) {
@@ -530,6 +520,6 @@ function runGame(plans, Display) {
   }
   startLevel(0);
 }
-  runGame(GAME_LEVELS, DOMDisplay);
+  //runGame(GAME_LEVELS, DOMDisplay);
 
 
