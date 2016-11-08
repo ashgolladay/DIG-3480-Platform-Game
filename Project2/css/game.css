@@ -1,30 +1,47 @@
 .background { 
-    background: #7bdff2;
-    table-layout: fixed;
-    border-spacing: 0; 
+	background-image: url("http://www.mrwallpaper.com/wallpapers/gradient-background-1600x1200.jpg");
+  table-layout: fixed;
+  border-spacing: 0;   
 }
-
 .background td { 
-	padding: 0;         
+	padding: 0;          
 }
 .lava { 
-	background: #ff7e6b; 
+	background: #FEB92F;
+  background-image: url("http://vignette1.wikia.nocookie.net/nitrome/images/4/44/Lava_(Knuckleheads).gif/revision/latest?cb=20111221194031")
+} 
+.wall { 
+	background: #000000;  
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/94/6c/a0/946ca06e70ae4ff5f85731cdb899165a.jpg");
 }
-.wall {
-	background: #EBE18C; 
-	background-image: url("http://14textures.com/wp-content/uploads/2015/06/Charcoal-2.jpg");
-}
-
 .actor { 
 	position: absolute;  
 }
-
 .player { 
-	background: #545e75; 
+  background: #008080; 
 }
-
+.coin { 
+background: white; 
+}
+.life {
+  background: #d4f7f6;
+  box-shadow: -4px -7px 8px white, 4px -7px 8px white;
+}
+.enemy {
+ transform: rotate(180deg);
+  background-image: url("https://cdn.tutsplus.com/mobile/uploads/legacy/Endless-Runner_Part-6/spikeBlock.png");
+}
 .floater { 
-	background: #4d9de0; 
+	background: #000066; 
+  background-image: url("http://selfieword.com/wp-content/uploads/2016/05/dark-stone-tile-texture-and-black-stone-texture-wallpaper.jpg")
+}
+.lost .player {
+  background: #006666;
+  transform: scale(-.2);
+}
+.won .player {
+  background: #00cccc;
+  transform: scale(3);
 }
 .game {
   overflow: hidden;
@@ -32,3 +49,5 @@
   max-height: 450px;
   position: relative;
 }
+
+
