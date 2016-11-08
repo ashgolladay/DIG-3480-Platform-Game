@@ -406,7 +406,7 @@ Level.prototype.playerTouched = function(type, actor) {
     this.status = "lost";
     this.finishDelay = 0.6;
   } else if (type == "life") {
-      playerXSpeed = 15;
+      playerXSpeed = 12;
       timerFunction = setTimeout(function(){playerXSpeed=8},3000);
       return actor.type == "life";
   } else if (type == "coin" || type == "life") {
